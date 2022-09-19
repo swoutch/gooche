@@ -6,7 +6,11 @@ async function getCurrentTab() {
 }
 
 chrome.action.onClicked.addListener(async (tab) => {
-  console.log(await getCurrentTab());
+  const currentTab = await getCurrentTab();
+  console.log(currentTab);
+  const newUrl = `https://google.com/search?q=cache:${currentTab.url}`;
+  console.log(newUrl)
+  await chrome.tabs.update(currentTab.id, { url: newUrl })
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     files: ['content.js']
