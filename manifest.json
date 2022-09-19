@@ -6,7 +6,8 @@
     "default_title": "Click to see the page as cached by Google"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
