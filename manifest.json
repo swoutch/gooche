@@ -1,13 +1,12 @@
 {
-  "name": "Action script injection demo",
+  "name": "Gooche",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_title": "Click to show an alert"
+    "default_title": "Click to see the page as cached by Google"
   },
   "permissions": [
-    "activeTab",
-    "scripting"
+    "activeTab"
   ],
   "background": {
     "service_worker": "background.js"
