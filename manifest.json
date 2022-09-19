@@ -1,12 +1,15 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "Action script injection demo",
   "version": "1.0",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
+  "action": {
+    "default_title": "Click to show an alert"
   },
   "permissions": [
-    "storage"
-  ]
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
